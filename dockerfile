@@ -11,7 +11,7 @@ FROM r-base:3.4.0
     RUN Rscript -e 'source("https://bioconductor.org/biocLite.R"); biocLite("RnBeads")'
     RUN Rscript -e 'source("https://bioconductor.org/biocLite.R"); biocLite("RnBeads.hg19")'
     RUN Rscript -e 'source("https://bioconductor.org/biocLite.R"); \
-        biocLite(pkgs=c("minfiData","ChAMPdata","wateRmelon","FDb.InfiniumMethylation.hg19","ChAMP"))'
+        biocLite(pkgs=c("minfiData","ChAMPdata","wateRmelon","FDb.InfiniumMethylation.hg19","ChAMP", "FlowSorted.Blood.450k"))'        
     RUN Rscript -e 'source("https://bioconductor.org/biocLite.R"); \
         biocLite(pkgs=c("sandwich","lmtest","gap","ggplot2", "gdata","snpStats","GenomicRanges"))'
     RUN Rscript -e 'source("https://bioconductor.org/biocLite.R"); \
